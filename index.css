@@ -1,64 +1,65 @@
-@import url('https://fonts.googleapis.com/css?family=Karla');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Karla:400');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
 
 *{
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: #5993E5;
+  
 }
 
-.center {
+.homepage-content {
+  text-align: center;
+  position: relative;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 240px;
-  margin-bottom: -10px;
-  width: 50%;
+  margin-top: 25%;
 }
 
-a {
+.homepage-title { 
   color: white;
-  text-decoration: none;
-  margin: 10px;
+  font-size: 500%;
+  font-family: lora;
+  
 }
 
-h1 {
-  font-family: raleway;
-  font-size: 40px;
-  line-height: 1.5;
-  color: #fff;
-}
-
-p {
+.homepage-text { 
   font-family: karla;
-  font-size: 20px;
-  color: #fff;
-  width: 400px;
-  margin-bottom: -5px;
-  margin-top: -10px;
+  color: lightgray;
+  font-size: 200%;
 }
 
-.navigation-bar {
-    display: block;
-    text-align: center;
-    overflow: hidden;
+.buttons-container { 
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: inline-block;
 }
 
-.navigation-bar a {
-    float: center;
-    color: white;
-    font-family: karla;
-    font-size: 110%;
-    text-align: center;
-    padding: 16px 20px;
-    text-decoration: none;
+.buttons-divider { 
+  width: 40px;
+  height: auto;
+  display: inline-block;
 }
 
-.navigation-bar a:hover {
-    color: #ffbb00;
-    cursor: pointer;
+.button { 
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: lightgray;
+  font-family: lato;
+  font-weight: thin;
+  color: black;
+  font-size: 150%;
+  text-decoration: none;
+  padding: 10px;
 }
+
+.button:hover { 
+  background-color: white;
+  color: #5993E5;
+}
+
