@@ -7,9 +7,12 @@
   padding: 0;
 }
 
+html { 
+  height: 100%;
+}
+
 body {
-  background-color: #5993E5;
-  
+  background-image: linear-gradient(#6190e8,#a7bfE8);
 }
 
 .homepage-content {
