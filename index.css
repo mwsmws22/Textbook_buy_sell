@@ -26,11 +26,12 @@ body {
   margin-top: 25%;
 }
 
-@media only screen and (max-width: 500px) { 
+@media screen and (max-width: 500px) { 
   .homepage-content { 
     position: relative;
     display: block;
     margin-top: 25%;
+    max-width: 1200px;
   }
 }
 
