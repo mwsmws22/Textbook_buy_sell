@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
 @import url('https://fonts.googleapis.com/css?family=Lato:300');
 
+@viewport { 
+  width: device-width;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -9,12 +13,6 @@
 
 html { 
   height: 100%;
-}
-
-@media screen and (max-width: 1080px) { 
-  .homepage-content { 
-    margin-top: 25%;
-  }
 }
 
 body {
@@ -25,7 +23,15 @@ body {
   text-align: center;
   position: relative;
   display: block;
-  margin-top: 15%;
+  margin-top: 25%;
+}
+
+@media only screen and (max-width: 500px) { 
+  .homepage-content { 
+    position: relative;
+    display: block;
+    margin-top: 25%;
+  }
 }
 
 .homepage-title { 
