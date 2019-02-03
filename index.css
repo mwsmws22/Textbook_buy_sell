@@ -82,6 +82,16 @@ body {
   color: #5993E5;
 }
 
+#search-page {
+  margin-top: 50px;
+}
+
+.ais-search-box {
+  display: inline-block;
+  float: center;
+  width: 300px;
+}
+
 /* ----- BOOK ANIMATION ----- */
 
 /* container styling */
