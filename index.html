@@ -46,23 +46,29 @@
     <div id="list-page" class="list-page-content">
         <br><br>
         <h class="list-page-title">List your used textbooks for sale here</h>
-        <br><br>
-        <p class="list-page-text">What class is the textbook used in?</p>
-        <br>
-        <div class="list-input-box"></div>
-        <br><br>
-        <p class="list-page-text">What is the name of the textbook?</p>
-        <br>
-        <div class="list-input-box"></div>
-        <br><br>
-        <p class="list-page-text">How much would you like to list it for?</p>
-        <br>
-        <div class="list-input-box"></div>
-        <br><br>
-        <p class="list-page-text">What is your email?</p>
-        <br>
-        <div class="list-input-box"></div>
-        <br><br>
+        <br><br><br>
+        <form action="data_collection.php" method="post" target="_blank">
+            <fieldset>
+                <p class="list-page-text">What class is the textbook used in?</p>
+                <input type="text" name="course_id" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">What is the name of the textbook?</p>
+                <input type="text" name="textbook_name" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">How much would you like to list it for?</p>
+                <input type="text" name="cost" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">What is your email?</p>
+                <input type="text" name="contact" class="list-input-box">
+            </fieldset>
+        </form>
+        <br><br><br>
         <i class="fa"><a id="icon-button" href=#top>&#xf139;</a></i>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
