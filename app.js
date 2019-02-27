@@ -2,7 +2,7 @@ function hitTemplate(hit) {
   return `
     <div class="hit">
       <div class="hit-content">
-        <div onclick='getPage(this)'>
+        <div onclick="getPage(${hit.course_id})">
           <h4>${hit._highlightResult.title.value}</h4>
           <p>${hit._highlightResult.instructor.value}, ${hit._highlightResult.term.value}</p>
         </div>
@@ -11,8 +11,8 @@ function hitTemplate(hit) {
   `;
 }
 
-function getPage(temp){
-  window.location.href = './productpage.html'
+function getPage(id){
+  window.location.href = './productpage.html?course_id=' + id;
 }
 
 const search = instantsearch({
@@ -49,18 +49,4 @@ search.addWidget(
   })
 );
 
-search.addWidget(
-  instantsearch.widgets.pagination({
-    container: "#pagination"
-  })
-);
-
 search.start();
-
-// Object retrieval operations
-var client = algoliasearch('C2ZUSONNI6', 'ace8178d8d8f86f292f600e2e324e5fe');
-var index = client.initIndex('Textbooks');
-
-index.search({ query: '4969' }).then(res => {
-  // console.log(res);
-});

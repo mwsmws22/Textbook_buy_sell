@@ -223,6 +223,10 @@ body {
   margin-top: 7.5px;
 }
 
+.ais-search-box--reset svg{
+  margin-top: 7.5px;
+}
+
 .search-page-text { 
   font-family: lato;
   font-size: 100%;
