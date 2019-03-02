@@ -24,12 +24,22 @@ indexClass.search({ query: course_id }).then(res => {
 
 index.search({ query: course_id }).then(res => {
   var hits = res.hits;
-  for (i=0; i<hits.length; i++) {
-  	var hit = hitProduct(hits[i]);
-    	var template = document.createElement('div');
-    	template.classList.add("grid-item");
-  	hit = hit.trim();
-    	template.innerHTML = hit;
-    	grid.appendChild(template);
+  console.log(hits);
+  if (hits.length == 0){
+    var emptyMessage = `<p><b>No textbooks for sale currently, check back soon!</b></p>`;
+    var template = document.createElement('div');
+    template.classList.add("grid-item");
+    template.innerHTML = emptyMessage;
+    grid.appendChild(template);
+  }else{
+    for (i=0; i<hits.length; i++) {
+      var hit = hitProduct(hits[i]);
+        var template = document.createElement('div');
+        template.classList.add("grid-item");
+        hit = hit.trim();
+        template.innerHTML = hit;
+        grid.appendChild(template);
+    }
   }
+
 });
