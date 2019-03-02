@@ -110,9 +110,11 @@ html, body {
   /* margin-top: 3%;
   margin-left: 8%; */
   padding-top: -5%;
-  padding-left: 8%;
-  padding-right: 40%;
+  /* padding-left: 8%; */
+  /* padding-right: 40%; */
   padding-bottom: 8%;
+  margin-right: auto;
+  margin-left: auto;
   grid-gap: 3%;
 }
 
@@ -128,7 +130,7 @@ html, body {
 }
 
 .grid-image {
-  width: 200px;
+  width: 240px;
   height: 270px;
   padding-left: 10px;
   padding-right: 20px;
