@@ -1,24 +1,40 @@
 <!doctype html>
 <html>
 <head>
-    <link rel="stylesheet" href="productpage.css" type="text/css">
-    <title>Textbook Sell & Buy</title>
+    <link rel="shortcut icon" type="image/x-icon" href="claw.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="productpage.css" >
+    <title>Search Results</title>
     <meta name="viewport" content="width=device-width, intial-scale=1">
 </head>
-<body>
-    <!-- productpage title -->
-    <div id="productpage" class="productpage-content">
-        <h class="productpage-title" id="title"></h>
-        <br><br><br><br>
-        <hr>
+<body>      
+<!-- NAVIGATION BAR -->
+<div class="navigation-bar-container">
+    <div class="navigation-bar">
+        <ul>
+            <li id="logo-text"><a href="index.html">PAWBOOKS</a></li>
+        </ul>
     </div>
-
-    <div class="listings" ><h1 class="productpage-text">Offers</h1>
-
+</div>
+<!-- PRODUCT PAGE TITLE -->
+<div id="productpage" class="productpage-content">
+    <h class="productpage-title">Listings for Textbooks from Your Classes</h>
+    <br><br><br><br>
+    <!-- <hr> -->
+</div>
+<!-- PARALLAX -->
+<div class="parallax1"></div>
+<!-- LISTINGS -->
+<div class="listings">
+    <h class="listings-heading" id="title"></h>
+    <h class="productpage-text">Offers</h>
     <div class="grid-container" id="productGrid"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-    <script src="productpage.js"></script>
+</div>
+<div class="grid-container" id="productGrid"></div>
+<div class="parallax2"></div>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="productpage.js"></script>
+<script src="parallax.js"></script>
 </body>
 </html>
