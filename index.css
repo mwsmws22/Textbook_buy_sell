@@ -68,11 +68,6 @@ html, body {
   text-decoration: none;
 }
 
-#logo-img { 
-  float: left;
-  margin-left: 9%;
-}
-
 #logo-text { 
   float: left;
   margin-left: 9%;
@@ -149,9 +144,9 @@ html, body {
   letter-spacing: -10%;
 }
 
-.icon-title { 
-font-size: 75%;
-color: white;
+.#icon-title { 
+  font-size: 75%;
+  color: white;
 }
 
 .homepage-subheading {
@@ -361,7 +356,7 @@ fieldset {
 }
 
 .submit-button:focus {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: white
   color: black;
   text-decoration: none;
   outline: 0;
