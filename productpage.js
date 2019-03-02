@@ -4,7 +4,7 @@ var course_id = url.searchParams.get("course_id");
 
 function hitProduct(hit){
   return `
-	  <img class="grid-image" src= "textbook.jpg">
+	  <img class="grid-image" src= "book1.jpg">
 	  <p><b>Textbook Name:</b> ${hit.textbook_name}</p>
 	  <p><b>Price:</b> ${hit.cost}</p>
 	  <p><b>Seller:</b> ${hit.contact}</p>

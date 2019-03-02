@@ -10,6 +10,10 @@ html, body {
   background-color: #bbb3cc;
 }
 
+.all {
+  background-image: linear-gradient(#756496,#a094b8);
+}
+
 /*** PARALLAX ***/
 .parallax1 {
   background: url('open-books.jpg') no-repeat fixed 50% 0;
@@ -21,9 +25,9 @@ html, body {
 }
 
 .parallax2 {
-  background: url('shelf.jpg') no-repeat fixed 70% 0;
+  background: url('open-books.jpg') no-repeat fixed 70% 0;
   background-position: center;
-  height: 70%;
+  height: 100%;
   background-size: cover;
   color: rgba(45, 0, 71, 0.5);
 }
@@ -133,6 +137,6 @@ html, body {
   height: 270px;
   padding-left: 10px;
   padding-right: 20px;
-  padding-top: 2px;
+  padding-top: 3px;
   float: left;
 }
