@@ -1,7 +1,7 @@
 @import url("https://use.typekit.net/vwk0sna.css");
 @import url("https://use.typekit.net/utf6pss.css");
 
-html, body { 
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -30,7 +30,7 @@ html, body {
 
 /*** NAVIGATION BAR ***/
 
-.navigation-bar-container { 
+.navigation-bar-container {
   font-family: adelle-sans, sans-serif;
   width: 100%;
   position: relative;
@@ -44,27 +44,27 @@ html, body {
 .navigation-bar li {
   font-size: 190%;
   list-style-type: none;
-  margin-top: 2%; 
+  margin-top: 2%;
   float: right;
   margin-left: 5%;
 }
 
-.navigation-bar li a { 
+.navigation-bar li a {
   color: white;
   text-decoration: none;
 }
 
-#logo-text { 
+#logo-text {
   float: left;
   margin-left: 2%;
 }
 
-#logo-text:hover { 
+#logo-text:hover {
   color: white;
   text-decoration: none;
 }
 
-#logo-text:focus { 
+#logo-text:focus {
   color: white;
   text-decoration: none;
 }
@@ -78,7 +78,7 @@ html, body {
   padding-bottom: 2%;
 }
 
-.productpage-title { 
+.productpage-title {
   color: white;
   font-size: 300%;
   font-weight: 600;
@@ -120,12 +120,11 @@ html, body {
 
 .grid-item {
   height: 275px;
-  width: 550px;
+  width: 100%;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
   color: white;
   font-size: 150%;
-  float: left;
   text-align: left;
 }
 
@@ -137,6 +136,3 @@ html, body {
   padding-top: 2px;
   float: left;
 }
-
-
-
