@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="index.css" type="text/css">
     <title>Textbook Sell & Buy</title>
-    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -42,11 +42,11 @@
             <div id="hits" class="search-page-text"></div>
         </div>
     </div>
-    <div id="list-page" class="list-page-content">
+    <div class="list-page-content">
         <br><br>
         <h class="list-page-title">List your used textbooks for sale here</h>
         <br><br><br>
-        <form action="data_collection.php" method="post" target="_blank">
+        <form class="list-page">
             <fieldset>
                 <p class="list-page-text">What is the course ID of the class?</p>
                 <input type="text" name="course_id" class="list-input-box">
@@ -66,11 +66,16 @@
                 <p class="list-page-text">What is your email?</p>
                 <input type="text" name="contact" class="list-input-box">
             </fieldset>
+            <fieldset>
+            	<button type = "submit" class="submit-button">Submit!</button>
+            </fieldset>
         </form>
         <br><br><br>
         <i class="fa"><a id="icon-button" href=#top>&#xf139;</a></i>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+    <script src="submit.js"></script>
     <script src="app.js"></script>
+    
 </body>
 </html>
