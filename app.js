@@ -11,6 +11,24 @@ function hitTemplate(hit) {
   `;
 }
 
+var currentHits = [];
+
+function wipeCurrentHits(event) {
+  var x = event.which || event.keyCode;
+  if (x != 13) {
+    currentHits = [];
+  }
+}
+
+function enterEvent(event) {
+  var x = event.which || event.keyCode;
+  if (currentHits) {
+    if (x == 13) {
+      getPage(currentHits[0].course_id)
+    }
+  }
+}
+
 function getPage(id){
   window.location.href = './productpage.html?course_id=' + id;
 }
@@ -35,6 +53,7 @@ search.addWidget(
     templates: {
       empty: "No results.",
       item: function(hit) {
+        currentHits.push(hit);
         return hitTemplate(hit);
       }
     }
