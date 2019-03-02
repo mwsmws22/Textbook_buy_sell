@@ -14,6 +14,7 @@ function hitProduct(hit){
 
 var client = algoliasearch('C2ZUSONNI6', 'ace8178d8d8f86f292f600e2e324e5fe');
 var index = client.initIndex('Textbooks');
+var indexClass = client.initIndex('EECS_courses');
 
 var grid = document.getElementById("productGrid");
 
@@ -24,7 +25,7 @@ index.search({ query: course_id }).then(res => {
 	var hit = hitProduct(hits[i]);
   	var template = document.createElement('div');
   	template.classList.add("grid-item");
-	hit = hit.trim(); 
+	hit = hit.trim();
   	template.innerHTML = hit;
   	grid.appendChild(template);
   }
