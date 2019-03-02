@@ -1,3 +1,5 @@
+var client = algoliasearch('C2ZUSONNI6', '175bcd12d4a450b773d484e3a8f039dc');
+var index = client.initIndex('Textbooks');
 
 function saveText(text, filename){
   var a = document.createElement('a');
@@ -28,20 +30,13 @@ const formToJSON = elements => [].reduce.call(elements, (data, element) => {
 	return data;
 }, {});
 
-
 const handleFormSubmit = event => {
   	event.preventDefault();
   	const content = formToJSON(form.elements);
   	var sig = hashCode(JSON.stringify(content));
   	content.objectID = sig;
-  	console.log(sig);
-  	const content_list = [];
-  	content_list.push(content);
-	saveText(JSON.stringify(content_list, null), "content.json");
-  	//textContent = JSON.stringify(content, null, "  ");
-  	//console.log(textContent)
+    index.addObject(content);
 };
 
 const form = document.getElementsByClassName('list-page')[0];
-console.log(form);
 form.addEventListener('submit', handleFormSubmit);
