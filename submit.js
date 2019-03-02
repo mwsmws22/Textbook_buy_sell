@@ -36,7 +36,8 @@ const handleFormSubmit = event => {
   	var sig = hashCode(JSON.stringify(content));
   	content.objectID = sig;
     index.addObject(content);
-    document.location.reload(true);
+    console.log(content);
+    window.location.reload();
 };
 
 const form = document.getElementsByClassName('list-page')[0];
