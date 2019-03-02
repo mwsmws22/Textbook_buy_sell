@@ -117,6 +117,8 @@ html, body {
   /* padding-left: 8%; */
   /* padding-right: 40%; */
   padding-bottom: 8%;
+  padding-left: 6%;
+  padding-right: 6%;
   margin-right: auto;
   margin-left: auto;
   grid-gap: 3%;
