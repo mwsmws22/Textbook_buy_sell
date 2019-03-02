@@ -281,6 +281,11 @@ color: white;
   line-height: 200%;
 }
 
+.ais-hits:hover{
+  cursor: pointer;
+}
+
+
 /*** LIST PAGE ***/
 
 .list-page-content {
