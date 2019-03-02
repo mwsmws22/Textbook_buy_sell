@@ -2,13 +2,31 @@ function hitTemplate(hit) {
   return `
     <div class="hit">
       <div class="hit-content">
-        <div onclick="getPage(${hit.course_id})">
+        <div onclick="getPage(${hit.catalog_num})">
           <h4>${hit._highlightResult.title.value}</h4>
           <p>${hit._highlightResult.instructor.value}, ${hit._highlightResult.term.value}</p>
         </div>
       </div>
     </div>
   `;
+}
+
+var currentHits = [];
+
+function wipeCurrentHits(event) {
+  var x = event.which || event.keyCode;
+  if (x != 13) {
+    currentHits = [];
+  }
+}
+
+function enterEvent(event) {
+  var x = event.which || event.keyCode;
+  if (currentHits) {
+    if (x == 13) {
+      getPage(currentHits[0].course_id)
+    }
+  }
 }
 
 function getPage(id){
@@ -35,6 +53,7 @@ search.addWidget(
     templates: {
       empty: "No results.",
       item: function(hit) {
+        currentHits.push(hit);
         return hitTemplate(hit);
       }
     }
