@@ -2,7 +2,7 @@ function hitTemplate(hit) {
   return `
     <div class="hit">
       <div class="hit-content">
-        <div onclick="getPage(${hit.course_id})">
+        <div onclick="getPage(${hit.catalog_num})">
           <h4>${hit._highlightResult.title.value}</h4>
           <p>${hit._highlightResult.instructor.value}, ${hit._highlightResult.term.value}</p>
         </div>

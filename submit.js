@@ -37,7 +37,7 @@ const handleFormSubmit = event => {
   	content.objectID = sig;
     index.addObject(content);
     console.log(content);
-    window.location.reload();
+    //window.location.reload();
 };
 
 const form = document.getElementsByClassName('list-page')[0];
