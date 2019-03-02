@@ -44,7 +44,7 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#searchbox",
-    placeholder: "Search for classes",
+    placeholder: "SEARCH FOR CLASSES",
     autofocus: false
   })
 );

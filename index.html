@@ -1,81 +1,97 @@
-<!doctype html>
-<html>
+<!doctype html> 
+<html> 
 <head>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <title>Textbook Sell & Buy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="claw.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
+    <!-- <link rel="stylesheet" href="login.css" type="text/css"> -->
+    <title>PawBooks</title>
 </head>
-<body id="top">
-    <br><br><br><br>
-    <!-- book animation -->
-    <div class="book">
-        <span class="page turn"></span>
-        <span class="page turn"></span>
-        <span class="page turn"></span>
-        <span class="page turn"></span>
-        <span class="page turn"></span>
-        <span class="cover"></span>
-        <span class="page"></span>
-        <span class="cover turn"></span>
-    </div>
-    <!-- homepage title -->
-    <div id="homepage" class="homepage-content">
-        <h class="homepage-title">Textbook Buy & Sell</h>
-        <br><br><br>
-        <p class="homepage-text">Buy textbooks here for less!</p> 
-        <br><br><br><br>
-        <div class="button-container">
-            <a class="button" href=#search-page>I want to find a book</a>
-            <div class="buttons-divider"></div>
-            <a class="button" href=#list-page>I want to sell a book</a>    
+<body>
+<!-- HOMEPAGE -->
+<div class="homepage" id="home">
+    <div class="homepage-overlay">
+         <div class="navigation-bar-container">
+            <div class="navigation-bar">
+                <ul>
+                    <li id="logo-text"><a href="index.html">PAWBOOKS</a></li>
+                    <li id="links"><a href="#list-page">SELL</a></li>
+                    <li id="links"><a href="#search-page">BUY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="homepage-text-container">
+            <h class="homepage-heading">Welcome to PawBooks!  <i class="fa"><a class="icon-title">&#xf1b0;</a></i></h>
+            
+            <br><br><br>
+            <p class="homepage-subheading">Sell your used books | Buy used books</p>
+            <p class="homepage-subheading">For Northwestern students, by Northwestern students</p>
+            <br><br><br><br>
+            <div class="homepage-buttons-container">
+                <a href="#search-page" class="homepage-button">BUY A BOOK</a>
+                <a href="#list-page" class="homepage-button">SELL A BOOK</a>
+            </div>
+            <br>
+            <i class="fa"><a class="icon-button" href=#search-page>&#xf103;</a></i>
         </div>
     </div>
-    <div id="search-page" class="search-page-content">
+</div>
+
+<!-- <div class="parallax1"><div class="parallax-overlay"></div></div> -->
+
+<!-- SEARCH PAGE -->
+<div id="search-page" class="search-page-content">
+    <div class="search-page-overlay">
         <div class="search-container">
             <br><br>
-            <h class="search-page-title">Search for your class to find your required textbooks</h>
+            <h class="search-page-heading">Search for your class to find your required textbooks</h>
             <br><br><br>
+            <p class="search-page-subheading">COURSE NUMBER | COURSE NAME | PROFESSOR</p>
+            <br><br>
             <div id="searchbox" class="search-page-text"></div>
             <br>
             <div id="hits" class="search-page-text"></div>
         </div>
     </div>
-    <div class="list-page-content">
+</div>
+<!-- LIST PAGE -->
+<div id="list-page" class="list-page-content">
+    <br><br>
+    <h class="list-page-heading">List your used textbooks for sale</h>
+    <br><br><br>
+    <form class="list-page">
+        <fieldset>
+            <p class="list-page-text">What is the course ID of the class?</p>
+            <input type="text" name="course_id" class="list-input-box">
+        </fieldset>
         <br><br>
-        <h class="list-page-title">List your used textbooks for sale here</h>
-        <br><br><br>
-        <form id="list-page">
-            <fieldset>
-                <p class="list-page-text">What is the course ID of the class?</p>
-                <input type="text" name="course_id" class="list-input-box">
-            </fieldset>
-            <br><br>
-            <fieldset>
-                <p class="list-page-text">What is the name of the textbook?</p>
-                <input type="text" name="textbook_name" class="list-input-box">
-            </fieldset>
-            <br><br>
-            <fieldset>
-                <p class="list-page-text">How much would you like to list it for?</p>
-                <input type="text" name="cost" class="list-input-box">
-            </fieldset>
-            <br><br>
-            <fieldset>
-                <p class="list-page-text">What is your email?</p>
-                <input type="text" name="contact" class="list-input-box">
-            </fieldset>
-            <fieldset>
-            	<button type = "submit" class="submit-button">Submit!</button>
-            </fieldset>
-        </form>
-        <br><br><br>
-        <i class="fa"><a id="icon-button" href=#top>&#xf139;</a></i>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-    <script src="submit.js"></script>
-    <script src="app.js"></script>
+        <fieldset>
+            <p class="list-page-text">What is the name of the textbook?</p>
+            <input type="text" name="textbook_name" class="list-input-box">
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <p class="list-page-text">How much would you like to list it for?</p>
+            <input type="text" name="cost" class="list-input-box">
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <p class="list-page-text">What is your email?</p>
+            <input type="text" name="contact" class="list-input-box">
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <button type = "submit" class="submit-button">SUBMIT</button>
+        </fieldset>
+    </form>
+    <br><br>
+    <i class="fa"><a id="icon-button" href=#top>&#xf102;</a></i>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+<script src="submit.js"></script>
+<script src="app.js"></script>
+<script src="parallax.js"></script>
 </body>
 </html>

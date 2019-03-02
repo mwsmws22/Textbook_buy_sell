@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <title>Textbook Sell & Buy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.1/dist/instantsearch.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="top">
+    <br><br><br><br>
+    <!-- book animation -->
+    <div class="book">
+        <span class="page turn"></span>
+        <span class="page turn"></span>
+        <span class="page turn"></span>
+        <span class="page turn"></span>
+        <span class="page turn"></span>
+        <span class="cover"></span>
+        <span class="page"></span>
+        <span class="cover turn"></span>
+    </div>
+    <!-- homepage title -->
+    <div id="homepage" class="homepage-content">
+        <h class="homepage-title">Textbook Buy & Sell</h>
+        <br><br><br>
+        <p class="homepage-text">Buy textbooks here for less!</p> 
+        <br><br><br><br>
+        <div class="button-container">
+            <a class="button" href=#search-page>I want to find a book</a>
+            <div class="buttons-divider"></div>
+            <a class="button" href=#list-page>I want to sell a book</a>    
+        </div>
+    </div>
+    <div id="search-page" class="search-page-content">
+        <div class="search-container">
+            <br><br>
+            <h class="search-page-title">Search for your class to find your required textbooks</h>
+            <br><br><br>
+            <div id="searchbox" class="search-page-text"></div>
+            <br>
+            <div id="hits" class="search-page-text"></div>
+        </div>
+    </div>
+    <div class="list-page-content">
+        <br><br>
+        <h class="list-page-title">List your used textbooks for sale here</h>
+        <br><br><br>
+        <form id="list-page">
+            <fieldset>
+                <p class="list-page-text">What is the course ID of the class?</p>
+                <input type="text" name="course_id" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">What is the name of the textbook?</p>
+                <input type="text" name="textbook_name" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">How much would you like to list it for?</p>
+                <input type="text" name="cost" class="list-input-box">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <p class="list-page-text">What is your email?</p>
+                <input type="text" name="contact" class="list-input-box">
+            </fieldset>
+            <fieldset>
+            	<button type = "submit" class="submit-button">Submit!</button>
+            </fieldset>
+        </form>
+        <br><br><br>
+        <i class="fa"><a id="icon-button" href=#top>&#xf139;</a></i>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="submit.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

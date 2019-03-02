@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+/* settings for all pages */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html { 
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(#9D50BB,#6E48AA);
+}
+
+/* ----- HOMEPAGE ----- */
+
+.homepage-content {
+  text-align: center;
+  position: relative;
+  display: block;
+  height: 100vh;
+  min-height: 100vh;
+  margin-top: 250px;
+}
+
+.homepage-title { 
+  color: white;
+  font-size: 500%;
+  font-family: lora;
+}
+
+.homepage-text { 
+  font-family: questrial;
+  color: black;
+  font-size: 200%;
+}
+
+.buttons-container { 
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.buttons-divider { 
+  width: 40px;
+  height: auto;
+  display: inline-block;
+}
+
+.button { 
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: lightgray;
+  font-family: lato;
+  font-weight: thin;
+  color: black;
+  font-size: 150%;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.button:hover { 
+  background-color: white;
+  color: #5993E5;
+}
+
+/* ----- BOOK ANIMATION ----- */
+
+/* container styling */
+
+.book {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 50%;
+  width: 20px;
+  height: 15px;
+  perspective: 4000px;
+}
+
+/* cover styling */
+
+.cover {
+  width: 140px;
+  height: 200px;
+  background-color: lightgray;
+  border: 1px solid black;
+  border-radius: 1px 0 0 1px;
+  box-shadow: inset 2px 1px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: absolute;
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+/* page styling */
+
+.page {
+  width: 127px;
+  height: 185px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1px 0 0 1px;
+  box-shadow: inset 2px 2px 15px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: absolute;
+  padding: 50px 20px 20px 20px;
+  top: 8px;
+  bottom: 6px; 
+  left: 0px;
+  right: 10px;
+  -ms-transform-origin: 0% 100%;
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+.page::before, .page::after {
+  display: block;
+  border-top: 1px dashed gray;
+  content: "";
+  padding-bottom: 5px;
+}
+
+/* setting time constraints for animations */
+
+.cover.turn {
+  -webkit-animation: book-cover 3s forwards;
+  -moz-animation: book-cover 3s forwards;
+  -ms-animation: book-cover 3s forwards;
+  animation: book-cover 3s forwards;
+}
+
+.page.turn {
+  -webkit-animation: book-open 3.15s forwards;
+  -moz-animation: book-open 3.15s forwards;
+  -ms-animation: book-open 3.15s forwards;
+  animation: book-open 3.15s forwards;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.page:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.page:nth-of-type(2) {
+  animation-delay: 0.75s
+}
+
+.page:nth-of-type(3) {
+  animation-delay: 1.5s;
+}
+
+.page:nth-of-type(4) {
+  animation-delay: 2.25s;
+}
+
+.page:nth-of-type(5) {
+  animation-delay: 3s;
+}
+
+/* animations for turning pages */
+
+@keyframes book-open {
+  30% { 
+      z-index: 999; 
+    }
+  100% {  
+      transform: rotateY(180deg);
+      z-index: 999;
+    }
+}
+
+@keyframes book-cover {
+  30% { 
+      z-index: 999; 
+    }
+  100% {  
+      transform: rotateY(-180deg);
+      z-index: 1;}
+}
+
+/* ----- SEARCH PAGE ----- */
+
+.search-page-content {
+  /* background-image: linear-gradient(#6190e8,#a7bfE8); */
+  text-align: center;
+  position: relative;
+  display: block;
+  height: 100vh;
+  min-height: 100vh;
+  margin-top: -435px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-page-title { 
+  font-family: lora;
+  font-size: 250%;
+}
+
+.ais-search-box {
+  display: inline-block;
+  float: center;
+  width: 300px;
+  height: 35px;
+}
+
+.ais-search-box--magnifier {
+  margin-top: 7.5px;
+}
+
+.ais-search-box--reset svg{
+  margin-top: 7.5px;
+}
+
+.search-page-text { 
+  font-family: lato;
+  font-size: 100%;
+  line-height: 200%;
+}
+
+/* ----- LIST PAGE ----- */
+
+.list-page-content {
+  background-image: linear-gradient(#9D50BB,#6E48AA);
+  text-align: center;
+  position: relative;
+  display: block;
+  margin-top: 0px;
+  height: 100vh;
+} 
+
+.list-page-title { 
+  font-family: lora;
+  font-size: 250%;
+}
+
+.list-page-text { 
+  font-family: lato;
+  font-size: 175%;
+  line-height: 200%;
+}
+
+.list-input-box { 
+  height: 30px;
+  width: 600px;
+  font-family: karla;
+  font-size: 30px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+
+#icon-button { 
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 50px;
+  color: white;
+  text-shadow: 1px 1px gray;
+  text-decoration: none;
+}
+
+fieldset { 
+  border: 0px;
+  line-height: 150%;
+}
+
+.submit-button { 
+  width: 150px;
+  height: 40px;
+  font-family: lato;
+  font-size: 20px;
+  margin-top: 20px;
+  border: 1px solid gray;
+}
+
